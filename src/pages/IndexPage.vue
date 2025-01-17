@@ -143,7 +143,7 @@ const handleClickCreate = async () => {
     errorHandler('輸入格式不正確')
     return
   }
-  const result = await Api.postApi<TempData, TempData>('', tempData.value)
+  const result = await Api.postApi<RowData, RowData>('', createData)
   if (Api.isFail(result)) {
     errorHandler('新增時發生錯誤')
     return
